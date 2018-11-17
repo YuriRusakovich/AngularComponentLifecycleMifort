@@ -5,7 +5,6 @@ import { ContainerComponent } from './container/container.component';
 import { CounterComponent } from './container/counter/counter.component';
 import { InputComponent } from './container/input/input.component';
 import { TotalComponent } from './container/total/total.component';
-import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +15,7 @@ import {FormsModule} from '@angular/forms';
     TotalComponent
   ],
   imports: [
-    BrowserModule, FormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
