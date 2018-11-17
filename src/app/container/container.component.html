@@ -1,0 +1,12 @@
+<div>
+  <app-input (inputName)="onInputName($event)"></app-input>
+  <ul>
+  <app-counter
+    *ngFor="let skill of skills; let i = index"
+    [skillName]="skill"
+    [name]="name"
+    (counterChanged)="onCounterChanged($event, i)"
+  ></app-counter>
+  <li class="collection"><app-total [counters]="counters"></app-total></li>
+  </ul>
+</div>
