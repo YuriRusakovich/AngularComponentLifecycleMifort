@@ -7,6 +7,9 @@
     [name]="name"
     (counterChanged)="onCounterChanged($event, i)"
   ></app-counter>
+    <label *ngIf="name">Введите навык:  </label>
+    <input *ngIf="name" type="text" [(ngModel)]="skillName" name="skillName">
+    <a *ngIf="skillName" (click)="addSkillItem()" class="btn">Добавить навык</a>
   <li class="collection"><app-total [counters]="counters"></app-total></li>
   </ul>
 </div>

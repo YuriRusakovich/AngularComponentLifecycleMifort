@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContainerComponent implements OnInit {
 
-  skills = ['skill1', 'skill2', 'skill3'];
-
+  skills = [];
+  skillName;
   name;
   counters = [];
 
@@ -23,5 +23,11 @@ export class ContainerComponent implements OnInit {
 
   onCounterChanged(counter, id) {
     this.counters[id] = counter;
+  }
+
+  addSkillItem() {
+    if (this.skillName !== '') {
+      this.skills.push(this.skillName);
+    }
   }
 }
